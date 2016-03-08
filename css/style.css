@@ -8,8 +8,52 @@ body{
 	text-align: center;
 	font-size: 40px;
 }
+#game-header.player-one{
+	text-align: center;
+	position: relative;
+	background-color: red;
+	color: white;
+	width: 30%;
+	margin-left: 35%;
+	border-radius: 5px;
+	padding: 10px 0 10px 0;
+}
 
 .my-turn{
+	text-align: center;
+	position: relative;
+	background-color: green;
+	color: white;
+	width: 30%;
+	margin-left: 35%;
+	border-radius: 5px;
+	padding: 10px 0 10px 0;
+	
+}
+
+#game-header.player-one{
+	text-align: center;
+	position: relative;
+	background-color: green;
+	color: white;
+	width: 30%;
+	margin-left: 35%;
+	border-radius: 5px;
+	padding: 10px 0 10px 0;
+}
+
+#game-header.player-two{
+	text-align: center;
+	position: relative;
+	background-color: green;
+	color: white;
+	width: 30%;
+	margin-left: 35%;
+	border-radius: 5px;
+	padding: 10px 0 10px 0;
+}
+
+#game-header.winner{
 	text-align: center;
 	position: relative;
 	background-color: red;
@@ -27,6 +71,7 @@ body{
 	color: white;
 	width: 30%;
 	margin-left: 35%;
+	margin-top: 10px;
 	border-radius: 5px;
 	padding: 10px 0 10px 0;
 	display: none;
@@ -94,6 +139,8 @@ body{
 	left: 7%;
 	height: 22%;
 	width: 22%;
+	text-align: center;
+	font-size: 150px;
 }
 
 #a2{
@@ -103,6 +150,8 @@ body{
 	left: 39%;
 	height: 22%;
 	width: 22%;
+	text-align: center;
+	font-size: 150px;
 }
 
 #a3{
@@ -112,6 +161,8 @@ body{
 	left: 71%;
 	height: 22%;
 	width: 22%;
+	text-align: center;
+	font-size: 150px;
 }
 
 #b1{
@@ -121,6 +172,8 @@ body{
 	left: 7%;
 	height: 22%;
 	width: 22%;
+	text-align: center;
+	font-size: 150px;
 }
 
 #b2{
@@ -130,6 +183,8 @@ body{
 	left: 39%;
 	height: 22%;
 	width: 22%;
+	text-align: center;
+	font-size: 150px;
 }
 
 #b3{
@@ -139,6 +194,8 @@ body{
 	left: 71%;
 	height: 22%;
 	width: 22%;
+	text-align: center;
+	font-size: 150px;
 }
 
 #c1{
@@ -148,6 +205,8 @@ body{
 	left: 7%;
 	height: 22%;
 	width: 22%;
+	text-align: center;
+	font-size: 150px;
 }
 
 #c2{
@@ -157,6 +216,8 @@ body{
 	left: 39%;
 	height: 22%;
 	width: 22%;
+	text-align: center;
+	font-size: 150px;
 }
 
 #c3{
@@ -166,18 +227,18 @@ body{
 	left: 71%;
 	height: 22%;
 	width: 22%;
+	text-align: center;
+	font-size: 150px;
 }
 
 img{
 	margin: auto;
 	display: block;
 	max-height: 98%;
-	/*display: none;*/
-}
-
-#x, #o{
 	display: none;
 }
+
+
 
 
 /*hr{
@@ -185,4 +246,4 @@ img{
 	/*width: 1px;*/
 	/*size: 300px;*/
 	/*background-color: black;*/
-/*}*/*/
+/*}*/
