@@ -172,8 +172,14 @@ img{
 	margin: auto;
 	display: block;
 	max-height: 98%;
-	
+	display: none;
 }
+
+#x, #o{
+	display: none;
+}
+
+
 /*hr{
 	/*border: 5px solid black;*/
 	/*width: 1px;*/
