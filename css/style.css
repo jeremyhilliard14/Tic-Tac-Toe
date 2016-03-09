@@ -8,6 +8,37 @@ body{
 	text-align: center;
 	font-size: 40px;
 }
+
+#one-player{
+	width: 10%;
+	height: 10%;
+	background-color: gray;
+	color: white;
+	float: left;
+	margin-top: 10px;
+	margin-left: 90px;
+}
+
+#two-player{
+	width: 10%;
+	height: 10%;
+	background-color: gray;
+	color: white;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#reset{
+	width: 10%;
+	height: 10%;
+	background-color: red;
+	color: white;
+	float: right;
+	margin-top: 10px;
+	margin-right: 195px;
+}
+
 #game-header.player-one{
 	text-align: center;
 	position: relative;

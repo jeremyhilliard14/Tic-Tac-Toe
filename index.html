@@ -11,6 +11,11 @@
 	<div class="header">
 			<h1>TIC TAC TOE</h1>
 	</div>
+	<button id="one-player" onclick="onePlayer();">1 player</button>
+
+	<button id="two-player" onclick="twoPlayer();">2 players</button>
+	<button id="reset" onclick="reset();">Reset</button>
+
 	<div id="game-header">
 		<div class="my-turn">
 			<h2>Player 1's Turn</h2>
@@ -19,17 +24,18 @@
 		<div class="your-turn">
 			<h2>Player 2's Turn</h2>
 		</div>
+	
 	</div>
 
 <div id="board">
 
 		<div class="row one">
 			
-			<div id="a1" onclick="setMark(this);"></div>
+			<div class"square" id="a1" onclick="setMark1(this) || setMark2(this);"></div>
 
-			<div id="a2" onclick="setMark(this);"></div>
+			<div class"square" id="a2" onclick="setMark1(this) || setMark2(this);"></div>
 
-			<div id="a3" onclick="setMark(this);"></div>
+			<div class"square" id="a3" onclick="setMark1() || setMark2(this);"></div>
 
 		</div>
 
@@ -41,21 +47,21 @@
 
 		<div class="row two">	
 
-			<div id="b1" onclick="setMark(this);"></div>
+			<div class"square" id="b1" onclick="setMark1(this) || setMark2(this);"></div>
 
-			<div id="b2" onclick="setMark(this);"></div>
+			<div class"square" id="b2" onclick="setMark1(this) || setMark2(this);"></div>
 
-			<div id="b3" onclick="setMark(this);"></div>
+			<div class"square" id="b3" onclick="setMark1(this) || setMark2(this);"></div>
 
 		</div>
 		
 		<div class="row three">	
 
-			<div id="c1" onclick="setMark(this);"></div>
+			<div class"square" id="c1" onclick="setMark1(this) || setMark2(this);"></div>
 
-			<div id="c2" onclick="setMark(this);"></div>
+			<div class"square" id="c2" onclick="setMark1(this) || setMark2(this);"></div>
 
-			<div id="c3" onclick="setMark(this);"></div>
+			<div class"square" id="c3" onclick="setMark1(this) || setMark2(this);"></div>
 
 		</div>
 
