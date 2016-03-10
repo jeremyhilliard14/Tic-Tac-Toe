@@ -9,6 +9,10 @@ body{
 	font-size: 40px;
 }
 
+.square{
+	display: none;
+}
+
 #one-player{
 	width: 10%;
 	height: 10%;
