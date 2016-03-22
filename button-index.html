@@ -37,8 +37,19 @@
 		</div>
 
 	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/button-script2.js"></script>
 
-	<script type="text/javascript" src="js/button-script.js"></script>
 
+	<script type="text/javascript">
+		
+		var squareWidth = document.getElementById('a1').clientWidth;
+	var squares = document.getElementsByClassName('square');
+	for(i=0; i<squares.length; i++){
+		squares[i].style.height = squareWidth + 'px';
+	}
+
+	</script>
 </body>
 </html>
