@@ -21,6 +21,35 @@ var winsPlayerTwo;
 
 // $(document).ready(function(){
 
+	$('.difficulty :button').click(function(){
+		var diff = $(this).val();
+		console.log(diff);
+		// if(diff == 'easy'){
+		// 	rowSize = 3;
+		// 	gridSize = rowSize*rowsize;
+		// }else if(diff == 'med'){
+		// 	rowSize = 4;
+		// 	gridSize = rowSize*rowsize;
+		// }else if(diff == 'hard'){
+		// 	rowSize = 5;
+		// 	gridSize = rowSize*rowsize;
+		// }
+	});
+		
+		// $('#button-bucket').toggle();
+		// gameTiles = cards.slice(0,(gridSize/2));
+
+
+		// for(i = 0; i < gridArray.length; i++){
+		// 	var html = '<div class="mg-tile">';
+		// 			html += '<div class="mg-tile-inner unmatched flipped">';
+		// 				html +='<div class="mg-tile-outside"></div>';
+		// 				html += '<div class="mg-tile-inside">' + gridArray[i] + '</div>';
+		// 			html +=	'</div>'
+		// 		html += '</div>'
+		// 	$('#mg-contents').append(html);
+		// }
+
 	function onePlayer(){
 		computer = true;
 		playerMode = 1;
