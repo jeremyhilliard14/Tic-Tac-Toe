@@ -45,7 +45,7 @@ var winsPlayerTwo;
 		}
 	}
 
-	
+
 
 	function addSymbol(element){
 		if(element.innerHTML == ''){
@@ -56,10 +56,12 @@ var winsPlayerTwo;
 				element.innerHTML = 'X';
 				// $(this).html('X');
 				whosTurn = 2;
-				gameHeader.innerHTML = "It is Player 2's turn";
+				// gameHeader.innerHTML = "It is Player 2's turn";
+				$('#game-header').html("It is Player 2's turn");
 				gameHeader.className = 'player-two';
 				//Get rid of class 'empty', and add who took the square
 				element.classList.remove('empty');
+
 				element.classList.add('p1');
 				playerOneMarkings.push(element.id);
 				checkWin();
@@ -75,7 +77,8 @@ var winsPlayerTwo;
 				//It has to be O's turn. Put an O in.
 				element.innerHTML = 'O';
 				whosTurn = 1;
-				gameHeader.innerHTML = "It is Player 1's turn";
+				// gameHeader.innerHTML = "It is Player 1's turn";
+				$('#game-header').hmtl("It is Player 1's turn");
 				gameHeader.className = 'player-one';
 				element.classList.remove('empty');
 				element.classList.add('p2');
@@ -83,8 +86,10 @@ var winsPlayerTwo;
 				checkWin();
 			}
 		}else{
-			gameHeader.innerHTML = "This box is taken";
-			gameHeader.className = 'red';
+			// gameHeader.innerHTML = "This box is taken";
+			$('#game-header').html("This box is taken");
+			// gameHeader.className = 'red';
+			$('#game-header').remove('.red');
 		}
 		checkWin();
 	}
@@ -92,9 +97,12 @@ var winsPlayerTwo;
 	function computersTurn(){
 		//It has to be O's turn. Put an O in.
 		// Get a random, empty square.
-		var arrayOfEmptySquares = document.getElementsByClassName('empty');
-		var randomEmptySquareIndex = Math.floor(Math.random() * arrayOfEmptySquares.length);
-		var element = arrayOfEmptySquares[randomEmptySquareIndex];
+		// var arrayOfEmptySquares = document.getElementsByClassName('empty');
+		var arrayOfEmptySquares = $('.empty');
+		// var randomEmptySquareIndex = Math.floor(Math.random() * arrayOfEmptySquares.length);
+		var randomEmptySquareIndex = Math.floor(Math.random() * $('.empty').length);
+		// var element = arrayOfEmptySquares[randomEmptySquareIndex];
+		var element = $('.empty')[randomEmptySquareIndex];
 		element.innerHTML = 'O';
 		whosTurn = 1;
 		gameHeader.innerHTML = "It is Player 1's turn";
@@ -143,9 +151,11 @@ var winsPlayerTwo;
 			// console.log(combo[i]);
 			document.getElementById(combo[i]).classList.add('winner');
 		}
-		gameHeader.innerHTML = 'Player ' + playerWhoWon + ' , won the game!';
+		// gameHeader.innerHTML = 'Player ' + playerWhoWon + ' , won the game!';
+		gameHeader.html('Player' + playerWhoWon + ' , won the game!');
 
-		var buttons = document.getElementsByTagName("button");
+		// var buttons = document.getElementsByTagName("button");
+		var buttons = $(':button');
 		for(i=0; i<buttons.length; i++){
 			buttons[i].disabled = true;
 		}
@@ -157,8 +167,10 @@ var winsPlayerTwo;
 		}else{
 			winsPlayerTwo++;
 		}
-		document.getElementById('play-again-button').disabled = false;
-		document.getElementById('play-again').style.display = 'block';
+		// document.getElementById('play-again-button').disabled = false;
+		$('#play-again-button').attr('disabled')
+		// document.getElementById('play-again').style.display = 'block';
+		$('#play-again').css('dislay', 'block');
 	}
 
 	function resetGame(){
@@ -166,18 +178,25 @@ var winsPlayerTwo;
 		playerOneMarkings = [];
 		playerTwoMarkings = [];
 		
-		var buttons = document.getElementsByClassName("square");
+		// var buttons = document.getElementsByClassName("square");
+		var buttons = $('.square');
 		// Clear innerHTML of squares
 		for(i=0; i<buttons.length; i++){
-			buttons[i].innerHTML = '' ;
-			buttons[i].classList.add('empty');
-			buttons[i].classList.remove('winner');
+			// buttons[i].innerHTML = '' ;
+			buttons[i].html('');
+			// buttons[i].classList.add('empty');
+			buttons[i].addClass('.empty');
+			// buttons[i].classList.remove('winner');
+			buttons[i].removeClass('.winner');
 		}
 		//Enable the one and two player buttons
-		document.getElementById('one-player').disabled = false;
-		document.getElementById('two-players').disabled = false;	
+		// document.getElementById('one-player').disabled = false;
+		$('#one-player').attr('disabled');
+		// document.getElementById('two-players').disabled = false;	
+		$('#two-players').attr('disabled');
 		//hide the play again button
-		document.getElementById('play-again').style.display = 'none';
+		// document.getElementById('play-again').style.display = 'none';
+		$('#play-again').css('display', 'none');
 	}
 
 // });
