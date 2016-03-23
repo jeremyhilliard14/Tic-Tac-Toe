@@ -1,14 +1,5 @@
-var winners = 
-[
-	['a1','a2','a3'],
-	['b1','b2','b3'],
-	['c1','c2','c3'],
-	['a1','b1','c1'],
-	['a2','b2','c2'],
-	['a3','b3','c3'],
-	['a1','b2','c3'],
-	['c1','b2','a3']
-];
+var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
+var winners = [];
 var playerOneMarkings = [];
 var playerTwoMarkings = [];
 var whosTurn = 1;
@@ -18,23 +9,68 @@ var playerMode;
 var winsPlayerOne;
 var winsPlayerTwo;
 
-
 // $(document).ready(function(){
 
 	$('.difficulty :button').click(function(){
 		var diff = $(this).val();
 		console.log(diff);
-		// if(diff == 'easy'){
-		// 	rowSize = 3;
-		// 	gridSize = rowSize*rowsize;
-		// }else if(diff == 'med'){
-		// 	rowSize = 4;
-		// 	gridSize = rowSize*rowsize;
+		var winnersInside = [];
+
+		if(diff == 'easy'){
+			var rowSize = 3;
+			var gridSize = rowSize;
+
+			for(i=1; i<=gridSize; i++){
+				winnersInside = [];
+				for(j=0;j<gridSize; j++){
+					winnersInside.push(alpha[j]+i);
+
+				}
+				winners.push(winnersInside);
+			}		
+			console.log(winners);			
+		}else if(diff == 'med'){
+			gridSize = 4
+		}
+
+		// 	// var rowSize = 4;
+		// 	// var gridSize = rowSize;
+		// 	// for(i=1; i<=gridSize; i++){
+		// 	// 	winnersInside = [];
+		// 	// 	for(j=0;j<gridSize; j++){
+		// 	// 		winnersInside.push(alpha[j]+i);
+
+		// 	// 	}
+		// 	// 	winners.push(winnersInside);
+		// 	}	
+		console.log(winners);				
 		// }else if(diff == 'hard'){
-		// 	rowSize = 5;
-		// 	gridSize = rowSize*rowsize;
+		// 	var rowSize = 5;
+		// 	var gridSize = rowSize;
+		// 	for(i=1; i<=gridSize; i++){
+		// 		winnersInside = [];
+		// 		for(j=0;j<gridSize; j++){
+		// 			winnersInside.push(alpha[j]+i);
+
+		// 		}
+		// 		winners.push(winnersInside);
+		// 	}	
+		// 	console.log(winners);				
 		// }
+		// htmlToAppend = '';
+		// for(i=0; i<winners.length; i++){
+		// 	htmlToAppend += '<div class="row row'+i+'">';
+		// 	for(j=0;j<=gridSize; j++){
+		// 		htmlToAppend += '<button disabled class="left square empty" id="'+winners[i][j]+'"></button>';
+		// 	}
+		// 	htmlToAppend += '</div>';
+		// }
+
+		// $('#board-wrapper').html(htmlToAppend);
+
 	});
+
+
 		
 		// $('#button-bucket').toggle();
 		// gameTiles = cards.slice(0,(gridSize/2));
@@ -230,3 +266,7 @@ var winsPlayerTwo;
 
 // });
 
+var squareWidth = $('#a1').width();
+$('#square').each(function(){
+	$(this.css('height', squareWidth + 'px'));
+});
