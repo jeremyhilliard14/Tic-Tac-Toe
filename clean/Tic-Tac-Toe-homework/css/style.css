@@ -1,0 +1,284 @@
+body{
+	max-width: 960px;
+	margin: auto;
+
+}
+
+.header{
+	text-align: center;
+	font-size: 40px;
+}
+
+.square{
+	display: none;
+}
+
+#one-player{
+	width: 10%;
+	height: 10%;
+	background-color: gray;
+	color: white;
+	float: left;
+	margin-top: 10px;
+	margin-left: 90px;
+}
+
+#two-player{
+	width: 10%;
+	height: 10%;
+	background-color: gray;
+	color: white;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#reset{
+	width: 10%;
+	height: 10%;
+	background-color: red;
+	color: white;
+	float: right;
+	margin-top: 10px;
+	margin-right: 195px;
+}
+
+#game-header.player-one{
+	text-align: center;
+	position: relative;
+	background-color: red;
+	color: white;
+	width: 30%;
+	margin-left: 35%;
+	border-radius: 5px;
+	padding: 10px 0 10px 0;
+}
+
+.my-turn{
+	text-align: center;
+	position: relative;
+	background-color: green;
+	color: white;
+	width: 30%;
+	margin-left: 35%;
+	border-radius: 5px;
+	padding: 10px 0 10px 0;
+	
+}
+
+#game-header.player-one{
+	text-align: center;
+	position: relative;
+	background-color: green;
+	color: white;
+	width: 30%;
+	margin-left: 35%;
+	border-radius: 5px;
+	padding: 10px 0 10px 0;
+}
+
+#game-header.player-two{
+	text-align: center;
+	position: relative;
+	background-color: green;
+	color: white;
+	width: 30%;
+	margin-left: 35%;
+	border-radius: 5px;
+	padding: 10px 0 10px 0;
+}
+
+#game-header.winner{
+	text-align: center;
+	position: relative;
+	background-color: red;
+	color: white;
+	width: 30%;
+	margin-left: 35%;
+	border-radius: 5px;
+	padding: 10px 0 10px 0;
+}
+
+.your-turn{
+	text-align: center;
+	position: relative;
+	background-color: red;
+	color: white;
+	width: 30%;
+	margin-left: 35%;
+	margin-top: 10px;
+	border-radius: 5px;
+	padding: 10px 0 10px 0;
+	display: none;
+}
+
+#board{
+	position: relative;
+	background-color: white;
+	height: 600px;
+	margin-top: 20px;
+}
+
+/*.row{
+	float: left;
+	background-color: white;
+}*/
+
+.hline{
+	height: 10px;
+	background-color: black;
+	margin: auto;
+}
+
+.hline.one{
+	position: absolute;
+	top: 33%;
+	left: 5%;
+	height: 10px;
+	width: 90%;
+	background-color: black;
+}
+
+.hline.two{
+	position: absolute;
+	top: 66%;
+	left: 5%;
+	height: 10px;
+	width: 90%;
+
+}
+
+.vline{
+	width: 10px;
+	height: 90%;
+	background-color: black;
+
+}
+
+.vline.one{
+	position: absolute;
+	top:5%;
+	left: 33%;
+}
+
+.vline.two{
+	position: absolute;
+	top: 5%;
+	left: 66%;
+}
+
+#a1{
+	position: absolute;
+	background-color: white;
+	top: 7%;
+	left: 7%;
+	height: 22%;
+	width: 22%;
+	text-align: center;
+	font-size: 150px;
+}
+
+#a2{
+	position: absolute;
+	background-color: white;
+	top: 7%;
+	left: 39%;
+	height: 22%;
+	width: 22%;
+	text-align: center;
+	font-size: 150px;
+}
+
+#a3{
+	position: absolute;
+	background-color: white;
+	top: 7%;
+	left: 71%;
+	height: 22%;
+	width: 22%;
+	text-align: center;
+	font-size: 150px;
+}
+
+#b1{
+	position: absolute;
+	background-color: white;
+	top: 39%;
+	left: 7%;
+	height: 22%;
+	width: 22%;
+	text-align: center;
+	font-size: 150px;
+}
+
+#b2{
+	position: absolute;
+	background-color: white;
+	top: 39%;
+	left: 39%;
+	height: 22%;
+	width: 22%;
+	text-align: center;
+	font-size: 150px;
+}
+
+#b3{
+	position: absolute;
+	background-color: white;
+	top: 39%;
+	left: 71%;
+	height: 22%;
+	width: 22%;
+	text-align: center;
+	font-size: 150px;
+}
+
+#c1{
+	position: absolute;
+	background-color: white;
+	top: 71%;
+	left: 7%;
+	height: 22%;
+	width: 22%;
+	text-align: center;
+	font-size: 150px;
+}
+
+#c2{
+	position: absolute;
+	background-color: white;
+	top: 71%;
+	left: 39%;
+	height: 22%;
+	width: 22%;
+	text-align: center;
+	font-size: 150px;
+}
+
+#c3{
+	position: absolute;
+	background-color: white;
+	top: 71%;
+	left: 71%;
+	height: 22%;
+	width: 22%;
+	text-align: center;
+	font-size: 150px;
+}
+
+img{
+	margin: auto;
+	display: block;
+	max-height: 98%;
+	display: none;
+}
+
+
+
+
+/*hr{
+	/*border: 5px solid black;*/
+	/*width: 1px;*/
+	/*size: 300px;*/
+	/*background-color: black;*/
+/*}*/
