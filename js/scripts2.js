@@ -147,8 +147,7 @@ function gameOver(combo, playerWhoWon){
 
 		buttons[i].style.pointerEvents = 'none';
 	}
-	//Give the user a button to click on, to reset the board. When they click on it
-	//Call resetGame()
+	
 }
 
 function resetGame(){
